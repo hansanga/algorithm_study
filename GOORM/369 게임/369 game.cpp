@@ -1,36 +1,23 @@
+
 #include <iostream>
+#include <string>
 using namespace std;
 int main()
 {
-    int c = 0;
     int n;
+    int c = 0;
     cin >> n;
-    for (int i = 1; i <= n; i++)
+    for (int i = 1; i < n; i++)
     {
-        if (i / 10 == 3 || i / 10 == 6 || i / 10 == 9)
+        string str = to_string(i);
+        for (int j = 0; j < str.size(); j++)
         {
-            if (i % 10 == 3 || i % 10 == 6 || i % 10 == 9)
+            if (str[j] == '3' || str[j] == '6' || str[j] == '9')
             {
-                c = c + 2;
-            }
-            else
-            {
-                c = c + 1;
+                c++;
             }
         }
-        else if (i % 10 == 3 || i % 10 == 6 || i % 10 == 9)
-        {
-            c = c + 1;
-        }
-        /*if ((i / 10 == 3 || i / 10 == 6 || i / 10 == 9) && (i % 10 == 3 || i % 10 == 6 || i % 10 == 9))
-        {
-            c = c + 2;
-        }
-        else if (i % 10 == 3 || i % 10 == 6 || i % 10 == 9)
-        {
-            c = c + 1;
-        }
-    }*/
-        cout << c << endl;
-        return 0;
     }
+    cout << c << endl;
+    return 0;
+}
