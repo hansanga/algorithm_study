@@ -3,15 +3,56 @@ using namespace std;
 int main()
 {
     int n, m;
-    cin >> n >> m;
+    cin >> m >> n;
 
-    /*
-    for (int j = 0; j < m; j++){
-        for (int i = 0; i < n; i++){
+    int i = 0;
+    int j = 0;
+    while (1)
+    {
+        j++;
+        if (j > m)
+        {
+            break;
+        }
+        for (int i = 0; i < n; i++)
+        {
             cout << "#";
         }
-        if ()
+        cout << endl;
+        j++;
+
+        if (j > m)
+        {
+            break;
+        }
+        for (int i = 0; i < n - 1; i++)
+        {
+            cout << ".";
+        }
+        cout << "#";
+        cout << endl;
+        j++;
+
+        if (j > m)
+        {
+            break;
+        }
+        for (int i = 0; i < n; i++)
+        {
+            cout << "#";
+        }
+        cout << endl;
+        j++;
+
+        if (j > m)
+        {
+            break;
+        }
+        cout << "#";
+        for (int i = 0; i < n - 1; i++)
+        {
+            cout << ".";
+        }
         cout << endl;
     }
-    */
 }
