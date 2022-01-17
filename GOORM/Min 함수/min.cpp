@@ -1,11 +1,16 @@
 #include <iostream>
 using namespace std;
 
+int Min(int n, int m)
+{
+    int min = 0;
+    min = n < m ? n : m;
+    return min;
+}
+
 int main()
 {
     int n, m;
-    int min = 0;
     cin >> n >> m;
-    min = n < m ? n : m;
-    cout << min << endl;
+    cout << Min(n, m) << endl;
 }
